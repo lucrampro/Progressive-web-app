@@ -1,32 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/article">Article</router-link>
-    </div>
+
     <router-view/>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style lang="scss">
+// IMPORT FONTS
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+// GENERAL
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  color: #44696c;
+  h1 {
+    font-weight: 900;
+    font-size: 18px;
+  }
+  .date {
+    font-size: 10px;
+    font-weight: 700;
+  }
 }
 </style>

@@ -18,7 +18,7 @@ Vue.use(VueRouter)
   },
   {
     path: '/articles',
-    name: 'Article',
+    name: 'Articles',
     component: () => import('../views/ArticleList.vue')
   }
 ]
