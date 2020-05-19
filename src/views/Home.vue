@@ -31,7 +31,6 @@
         flex-direction: column;
         justify-content: center;
         margin: auto;
-        margin-top: 100px;
         padding: 30px;
         max-width: 500px;
     }
