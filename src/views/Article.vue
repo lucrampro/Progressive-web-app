@@ -39,8 +39,8 @@ export default {
         position: relative;
         .article-content {
             width: 70vw;
-            margin: auto;
-            margin-top: 120px;
+            margin: 120px auto auto auto;
+            //margin-top: 120px;
             flex-direction: column;
             background-color: rgba(255, 253, 245, 0.85);
             border-radius: 5px;
