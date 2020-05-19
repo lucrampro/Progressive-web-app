@@ -5,6 +5,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'app',
+}
+</script>
+
 <style lang="scss">
 // IMPORT STYLE
 @import url('./style/reset.css');
