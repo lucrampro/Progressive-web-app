@@ -6,17 +6,19 @@
         Vous avez toujours reve de devenir dresseur pokemon ? <br> Combatre la ligue ? <br> collectionné tous les pokemon ?
         Aujourd'hui ces possible avec POKEMON GO
       </h1>
+      <Buttons/>
     </div>
   </div>
 </template>
 
 <script>
 // IMPORTS COMPONENTS
-// import Buttons from './Button.vue'
+import Buttons from './Button.vue'
 
 export default {
   name: 'Home',
   components: {
+    Buttons,
   },
 }
 </script>

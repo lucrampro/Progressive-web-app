@@ -12,7 +12,7 @@ Vue.use(VueRouter)
     component: Home
   },
   {
-    path: '/article/:article/:component',
+    path: '/article/:slug/',
     name: 'Article',
     component: () => import('../views/Article.vue')
   },

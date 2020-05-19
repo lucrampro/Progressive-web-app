@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-
+    <router-link to="/articles">les article</router-link>
     <router-view/>
   </div>
 </template>

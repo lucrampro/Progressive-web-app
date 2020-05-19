@@ -6,9 +6,9 @@ export default {
   name: 'buttons',
   props: {
     text : {
-      default: 'my buttons'
-    }
-  }
+      default: 'my buttons',
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>
@@ -20,5 +20,8 @@ export default {
     border-radius: 50px;
     text-transform: uppercase;
     color: #fefefe;
+    margin: auto;
+    margin-top: 20px;
+    display: block;
   }
 </style>
