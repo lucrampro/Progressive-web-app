@@ -70,10 +70,13 @@ body {
     text-transform: uppercase;
     // opacity: 85%;
     @media(min-width:1000px){
-      width: 20vw;
+      width: 35vw;
       margin: 10px;
-      height: 450px;
+      height: 490px;
+    }
+    @media(min-width:1500px){
 
+      height: 500px;
     }
     h1 {
       line-height: 20px;

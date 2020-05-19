@@ -50,15 +50,24 @@ export default {
         &.article {
           color: red;
           margin-left: 10px;
+          margin-bottom: 10px;
         }
         &.date {
           font-size: 13px;
-          
+          width: 90%;
+          margin: auto;
+          @media(min-width:1000px){
+            font-size: 18px;
+          }
         }
       }
-      @media(min-width:1000px){
-        font-size: 18px;
-        }
+      h1{
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px
+      }
+      
       .img--desc{
         width: 90%;
         margin: auto;
