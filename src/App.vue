@@ -52,6 +52,13 @@ body {
   .logo {
     margin: auto;
     display: block;
+    @media(min-width:1000px){
+      position: absolute;
+      left: 45%;
+      top: 1%;
+      transform: translate(-1%, -4%)
+
+    }
   }
   .wrapper--text {
     padding: 10px;
@@ -59,8 +66,15 @@ body {
     background-color: #fffff5;
     // border-radius: 1%;
     margin-top: 20px;
+
     text-transform: uppercase;
     // opacity: 85%;
+    @media(min-width:1000px){
+      width: 20vw;
+      margin: 10px;
+      height: 450px;
+
+    }
     h1 {
       line-height: 20px;
     }

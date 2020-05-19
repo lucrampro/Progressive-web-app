@@ -33,6 +33,14 @@ export default {
 <style lang="scss" scoped>
 .article--list {
   padding: 20px;
+  @media(min-width:1000px){
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 15em
+    }
   a {
     .wrapper--text {
       span {
@@ -45,8 +53,12 @@ export default {
         }
         &.date {
           font-size: 13px;
+          
         }
       }
+      @media(min-width:1000px){
+        font-size: 18px;
+        }
       .img--desc{
         width: 90%;
         margin: auto;
