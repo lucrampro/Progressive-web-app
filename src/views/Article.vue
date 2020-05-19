@@ -38,14 +38,11 @@ export default {
     position: absolute;
     width: 70vw;
     left: 50%;
-    margin-left: 50%;
     transform: translateX(-50%);
     flex-direction: column;
     background-color: rgba(255, 253, 245, 0.85);
     border-radius: 5px;
     padding: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
     min-height: 70vh;
     max-height: 70vh;
     bottom: 5vh;
