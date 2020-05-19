@@ -43,6 +43,7 @@ body {
   h1 {
     font-weight: 900;
     font-size: 18px;
+    text-transform: uppercase;
   }
   .date {
     font-size: 10px;
@@ -63,6 +64,11 @@ body {
     h1 {
       line-height: 20px;
     }
+  }
+  .author {
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
   }
 }
 </style>
