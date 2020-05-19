@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <router-link to="/articles">les article</router-link>
     <router-view />
   </div>
 </template>
@@ -51,16 +50,15 @@ body {
   }
   .logo {
     margin: auto;
+    margin-bottom: 20px;
     display: block;
   }
   .wrapper--text {
-    padding: 10px;
-    padding-top: 30px;
-    background-color: #fffff5;
-    // border-radius: 1%;
+    padding: 30px; //padding-top: 30px;
+    background-color: rgba(255, 253, 245, 0.85);
+    border-radius: 5px;
     margin-top: 20px;
     text-transform: uppercase;
-    // opacity: 85%;
     h1 {
       line-height: 20px;
     }

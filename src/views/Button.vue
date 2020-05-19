@@ -6,7 +6,7 @@ export default {
   name: 'buttons',
   props: {
     text : {
-      default: 'my buttons',
+      default: 'Voir les articles',
     },
   },
 }
@@ -18,10 +18,10 @@ export default {
     background: linear-gradient(to right, #24ccaa, #a2db95);
     font-size: 13px;
     border-radius: 50px;
+    border: none;
     text-transform: uppercase;
     color: #fefefe;
-    margin: auto;
-    margin-top: 20px;
+    margin: 40px auto 20px auto;
     display: block;
   }
 </style>
