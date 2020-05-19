@@ -34,30 +34,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.article-content {
-    position: absolute;
-    width: 70vw;
-    left: 50%;
-    transform: translateX(-50%);
-    flex-direction: column;
-    background-color: rgba(255, 253, 245, 0.85);
-    border-radius: 5px;
-    padding: 30px;
-    min-height: 70vh;
-    max-height: 70vh;
-    bottom: 5vh;
-    overflow: scroll;
 
-    .img-article {
-        width: 100%;
+    .article-container {
+        position: relative;
+
+        .article-content {
+            width: 70vw;
+            margin-top: 120px;
+            margin-right: auto;
+            margin-left: auto;
+            flex-direction: column;
+            background-color: rgba(255, 253, 245, 0.85);
+            border-radius: 5px;
+            padding: 30px;
+            min-height: 70vh;
+            max-height: 70vh;
+            bottom: 5vh;
+            overflow: scroll;
+
+            .img-article {
+                width: 100%;
+            }
+        }
+
+        .close {
+            position: absolute;
+            width: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -25px;
+        }
     }
-}
 
-.close {
-    position: absolute;
-    width: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 2.5vh;
-}
 </style>
