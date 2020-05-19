@@ -34,10 +34,17 @@ body {
   h1 {
     font-weight: 900;
     font-size: 18px;
+    text-transform: uppercase;
   }
   .date {
     font-size: 10px;
     font-weight: 700;
+  }
+
+  .author {
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
   }
 }
 </style>
