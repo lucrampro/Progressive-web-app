@@ -37,12 +37,10 @@ export default {
 
     .article-container {
         position: relative;
-
         .article-content {
             width: 70vw;
+            margin: auto;
             margin-top: 120px;
-            margin-right: auto;
-            margin-left: auto;
             flex-direction: column;
             background-color: rgba(255, 253, 245, 0.85);
             border-radius: 5px;
@@ -51,12 +49,10 @@ export default {
             max-height: 70vh;
             bottom: 5vh;
             overflow: scroll;
-
             .img-article {
                 width: 100%;
             }
         }
-
         .close {
             position: absolute;
             width: 50px;
