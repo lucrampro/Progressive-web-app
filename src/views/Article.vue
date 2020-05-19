@@ -63,9 +63,4 @@ export default {
     transform: translateX(-50%);
     bottom: 2.5vh;
 }
-
-@media screen and (min-width: 800px){
-
-    
-}
 </style>
