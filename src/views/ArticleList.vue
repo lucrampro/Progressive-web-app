@@ -1,13 +1,17 @@
 <template>
-  <div class="artile--list">
-    <h1>Liste des articles</h1>
-    <div class="content">
-      <div v-for="post in posts" :key="post.id" class="card">
-        <router-link :to="`/article/${ post.id }`" > {{ post.title }}</router-link>
+  <div class="article--list">
+    <img src="../assets/logo.png" alt="" class="logo">
+
+    <router-link :to="`/article/${ post.id }`" v-for="post in posts" :key="post.id" >
+      <div class="wrapper--text">
+        <span class="article"> article </span>
+        <span class="date"> 23 mai 2020</span>
+        <h1>{{ post.title }}</h1>
+        <img class="img--desc" src="../assets/test.png" alt="">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, eligendi dignissimos. Odio, obcaecati! Perferendis repellendus veniam nam ullam, eaque, quam neque rem debitis saepe, nisi consectetur. Laborum at voluptatum aspernatur.</p>
       </div>
+    </router-link>
     </div>
-    
-  </div>
 </template>
 <script>
 export default {
@@ -27,7 +31,35 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.card {
-  margin-top: 20px;
+.article--list {
+  padding: 20px;
+  a {
+    .wrapper--text {
+      span {
+        margin-top: 10px;
+        display: block;
+        text-transform: uppercase;
+        &.article {
+          color: red;
+          margin-left: 10px;
+        }
+        &.date {
+          font-size: 13px;
+        }
+      }
+      .img--desc{
+        width: 90%;
+        margin: auto;
+        display: block;
+      }
+      p {
+        text-transform: capitalize;
+        font-weight: 400;
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+      }
+    }
+  }
 }
 </style>
