@@ -1,12 +1,58 @@
 <template>
   <div id="app">
-    <router-view />
+    <div class="overlay">
+      <img class="logo" src="./assets/logo.png" alt="" srcset="">
+    </div>
+    <transition
+      v-on:before-enter="beforeEnter"
+      v-on:enter="enter"
+
+      v-on:before-leave="beforeLeave"
+      v-on:leave="leave"
+>
+  <router-view />
+</transition>
   </div>
 </template>
 
 <script>
+// import library
+import { gsap } from 'gsap';
+
   export default {
     name: "app",
+    mounted() {
+      console.log(this.$route.name)
+    },
+    methods: {
+  beforeEnter: function () {
+
+  },
+  enter: function (el, done) {
+    let tl = gsap.timeline()
+
+    tl.staggerTo('body *', 1.5, {
+      opacity: 1,
+      onComplete: () => {
+        done();
+      }
+    })
+
+  },
+  beforeLeave: function () {
+    
+    },
+  leave: function (el, done) {
+    let tl = gsap.timeline()
+
+    tl.staggerTo('body *', 1.5, {
+      opacity: 0,
+      onComplete: () => {
+        done();
+      }
+    })
+  },
+}
   };
 </script>
 
@@ -19,6 +65,22 @@
   // GENERAL
   * {
     outline: none;
+  }
+  .overlay{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: #fefefe;
+    position: absolute;
+    top: 0;
+    left: 0;
+    img {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+    }
   }
   body {
     height: 100vh;
