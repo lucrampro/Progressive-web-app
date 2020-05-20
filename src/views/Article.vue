@@ -33,10 +33,15 @@ export default {
       `https://my-json-server.typicode.com/melvinDebot/pokemon-go/article/${this.$route.params.slug}`
     )
       .then((response) => response.json())
-      .then((json) => (this.post = json));
+      .then((json) => {
+        this.post = json;
+        this.$nextTick(() => {
+          gsap.from('.wrapper--text', 0.5, { y: '50px', opacity: 0 })
+        })
+      });
   },
   mounted() {
-    gsap.from('.wrapper--text', 1.5, { y: '50px', opacity: 0 })
+    // gsap.from('.wrapper--text', 1.5, { y: '50px', opacity: 0 })
   },
 };
 </script>
