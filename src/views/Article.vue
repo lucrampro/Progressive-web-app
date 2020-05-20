@@ -9,7 +9,7 @@
       <h1 class="title">{{ post.title }}</h1>
       <img class="img-article" :src="post.img" alt="" />
       <p class="content">{{ post.texte }}</p>
-      <div class="author">{{ post.author }}</div>
+      <div class="author">- {{ post.author }}</div>
     </div>
     <router-link to="/articles">
       <img class="close" src="../assets/article/close.png" alt="" />
@@ -44,20 +44,17 @@ export default {
 <style lang="scss" scoped>
 .article {
   position: relative;
-
-
   .wrapper--text {
     width: 70vw;
     margin: auto;
     flex-direction: column;
-    background-color: rgba(255, 253, 245, 0.85);
-    border-radius: 5px;
-    padding: 30px;
     height: 64vh;
     bottom: 5vh;
     overflow: scroll;
     .img-article {
       width: 100%;
+      max-width: 500px;
+      margin: auto;
     }
     .content {
       line-height: 18px;
