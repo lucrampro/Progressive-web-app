@@ -1,19 +1,20 @@
 <template>
   <div class="article--list">
-    <img src="../assets/logo.png" alt="" class="logo" />
-
-    <div class="wrapper--liste">
+    <router-link :to="`/`" class="header">
+      <img src="../assets/logo.png" alt="" class="img-header logo" />
+    </router-link>
+    <div class="wrapper--list">
       <router-link
         :to="`/article/${post.id}`"
         v-for="post in posts"
         :key="post.id"
       >
         <div class="wrapper--text">
-          <span class="article"> article </span>
           <span class="date"> {{ post.date }}</span>
           <h1>{{ post.title }}</h1>
           <img class="img--desc" :src="post.img" alt="" />
-          <p>{{ post.texte }}</p>
+          <p>{{ post.header }}</p>
+          <p>Lire la suite ...</p>
         </div>
       </router-link>
     </div>
@@ -44,20 +45,20 @@ export default {
 </script>
 <style lang="scss" scoped>
 .article--list {
-  padding: 20px;
-  .wrapper--liste {
+  .wrapper--list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin: auto;
+    margin-bottom: 50px;
+    max-width: 80vw;
     a {
       .wrapper--text {
-        // height: 400px;
         margin: 10px;
-        @media screen and (min-width: 769px) {
-          width: 400px;
-          height: 1400px;
-        }
+        max-width: 400px;
+        min-height: 450px;
+
         span {
           margin-top: 10px;
           display: block;
