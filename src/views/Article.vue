@@ -55,6 +55,7 @@ export default {
       width: 100%;
       max-width: 500px;
       margin: auto;
+      display: block;
     }
     .content {
       line-height: 18px;
