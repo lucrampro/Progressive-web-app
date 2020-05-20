@@ -47,10 +47,10 @@ self.addEventListener('push', (event) => {
 
 	const options = {
 		body: pushMessage[0].title,
-		icon: './img/apple-touch-icon-60x60.png',
-		image: './img/apple-touch-icon-60x60.png',
-		vibrate: [200, 100, 200, 100],
-		tag: 'vibration-sample'
+		icon: './assets/logo.png',
+		image: './assets/logo.png',
+		vibrate: [200, 200, 200, 200],
+		tag: 'ramdom-vibration'
 	}
 
 	event.waitUntil(
