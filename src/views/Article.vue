@@ -36,7 +36,7 @@ export default {
       .then((json) => (this.post = json));
   },
   mounted() {
-    gsap.from('.article-container', 1.5, { y: '50px', opacity: 0 })
+    gsap.from('.wrapper--text', 1.5, { y: '50px', opacity: 0 })
   },
 };
 </script>
