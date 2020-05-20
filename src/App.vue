@@ -73,6 +73,10 @@ body {
     margin-bottom: 20px;
     display: block;
   }
+  .img-header {
+        margin-top: 30px;
+        max-height: 100px;
+  }
   .wrapper--text {
     padding: 30px; //padding-top: 30px;
     background-color: rgba(255, 253, 245, 0.85);

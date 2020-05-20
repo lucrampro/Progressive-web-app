@@ -1,7 +1,8 @@
 <template>
   <div class="article--list">
-    <img src="../assets/logo.png" alt="" class="logo" />
-
+    <router-link :to="`/`" class="header">
+      <img src="../assets/logo.png" alt="" class="img-header logo" />
+    </router-link>
     <div class="wrapper--liste">
       <router-link
         :to="`/article/${post.id}`"
@@ -44,7 +45,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .article--list {
-  padding: 20px;
   .wrapper--liste {
     display: flex;
     flex-wrap: wrap;
