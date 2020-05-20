@@ -21,6 +21,7 @@
 </template>
 <script>
 //IMPORT LIBRARY
+import gsap from 'gsap'
 
 export default {
   name: "ArticleList",
@@ -36,6 +37,9 @@ export default {
         this.posts = json;
       });
   },
+  mounted() {
+    gsap.timeline().staggerFrom('.article--list *', 1, { y: '50px', opacity: 0 }, 0.2)
+  }
 };
 </script>
 <style lang="scss" scoped>

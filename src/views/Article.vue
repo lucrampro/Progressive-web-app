@@ -15,6 +15,9 @@
 </template>
 
 <script>
+// IMPORT LIBRARY
+import gsap from 'gsap';
+
 export default {
   name: "Post",
   data() {
@@ -30,7 +33,7 @@ export default {
       .then((json) => (this.post = json));
   },
   mounted() {
-    console.log(`l'etat de mon post est ${this.post}`);
+    gsap.from('.article-container', 1, { y: '50px', opacity: 0 })
   },
 };
 </script>

@@ -1,65 +1,16 @@
 <template>
   <div id="app">
-    <div class="overlay">
-      <img class="logo" src="./assets/logo.png" alt="" srcset="" />
-    </div>
-    <transition
-      v-on:before-enter="beforeEnter"
-      v-on:enter="enter"
-      v-on:before-leave="beforeLeave"
-      v-on:leave="leave"
-    >
       <router-view />
-    </transition>
   </div>
 </template>
 
 <script>
 // import library
-import { gsap, Bounce } from "gsap";
+
 
 export default {
   name: "app",
   mounted() {
-    console.log(this.$route.name);
-    gsap
-      .timeline()
-      .set(".overlay .logo", { scale: 0, y: "-50%", x: "-50%" })
-      .to(".overlay .logo", 1.5, { scale: 1, ease: Bounce.easeOut })
-      .to(".overlay .logo", 1, { rotate: "360deg", y: "-50%", x: "-50%" })
-      .to(".overlay .logo", 0.5, { scale: 0, ease: Bounce.easeOut })
-      .to(".overlay", 0.5, { opacity: 0 })
-      .set(".overlay", { height: 0 })
-      .staggerFrom(
-        ".home .logo, .home .wrapper--text",
-        0.5,
-        { opacity: 0, y: "50px" },
-        0.2
-      );
-  },
-  methods: {
-    beforeEnter: function() {},
-    enter: function(el, done) {
-      let tl = gsap.timeline();
-      console.log("je suis le FUCKING ENTER");
-      tl.staggerTo("body *", 1.5, {
-        opacity: 1,
-        onComplete: () => {
-          done;
-        },
-      });
-    },
-    beforeLeave: function() {},
-    leave: function(el, done) {
-      let tl = gsap.timeline();
-      console.log("je suis le FUCKING LEAVE PTN");
-      tl.staggerTo("body *", 1.5, {
-        opacity: 0,
-        onComplete: () => {
-          done();
-        },
-      });
-    },
   },
 };
 </script>
