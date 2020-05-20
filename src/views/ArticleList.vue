@@ -57,7 +57,7 @@ export default {
       .wrapper--text {
         margin: 10px;
         max-width: 400px;
-        min-height: 450px;
+        height: 450px;
 
         span {
           margin-top: 10px;
