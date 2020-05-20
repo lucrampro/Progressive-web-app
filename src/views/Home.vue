@@ -30,9 +30,9 @@ export default {
   mounted() {
     gsap
       .timeline()
-      .set(".overlay img", { scale: 0, y: "-50%", x: "-50%" })
+      .set(".overlay img", { scale: 0 })
       .to(".overlay img", 1.5, { scale: 1, ease: Bounce.easeOut })
-      .to(".overlay img", 1, { rotate: "360deg", y: "-50%", x: "-50%" })
+      .to(".overlay img", 1, { rotate: "360deg"})
       .to(".overlay img", 0.5, { scale: 0, ease: Bounce.easeOut })
       .to(".overlay", 0.5, { opacity: 0 })
       .set(".overlay", { height: 0 })
