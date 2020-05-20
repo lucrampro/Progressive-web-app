@@ -73,12 +73,16 @@ body {
     margin-bottom: 20px;
     display: block;
   }
+  .img-header {
+        margin-top: 30px;
+        max-height: 100px;
+  }
   .wrapper--text {
-    padding: 30px; //padding-top: 30px;
+    padding: 30px;
     background-color: rgba(255, 253, 245, 0.85);
     border-radius: 5px;
     margin-top: 20px;
-    text-transform: uppercase;
+
     h1 {
       line-height: 20px;
     }

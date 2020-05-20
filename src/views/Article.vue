@@ -1,12 +1,15 @@
 <template>
-  <div class="article-container">
+  <div class="article">
+    <router-link :to="`/`" class="header">
+      <img src="../assets/logo.png" alt="" class="img-header logo" />
+    </router-link>
     <!-- LES ARTICLES SERONT INJECTÉs ICI -->
-    <div v-if="post" class="article-content">
+    <div v-if="post" class="wrapper--text">
       <p class="date">{{ post.date }}</p>
       <h1 class="title">{{ post.title }}</h1>
       <img class="img-article" :src="post.img" alt="" />
       <p class="content">{{ post.texte }}</p>
-      <div class="author">{{ post.author }}</div>
+      <div class="author">- {{ post.author }}</div>
     </div>
     <router-link to="/articles">
       <img class="close" src="../assets/article/close.png" alt="" />
@@ -39,22 +42,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.article-container {
+.article {
   position: relative;
-  .article-content {
+  .wrapper--text {
     width: 70vw;
     margin: auto;
-    margin-top: 50px;
     flex-direction: column;
-    background-color: rgba(255, 253, 245, 0.85);
-    border-radius: 5px;
-    padding: 30px;
-    min-height: 70vh;
-    max-height: 80vh;
+    height: 64vh;
     bottom: 5vh;
     overflow: scroll;
     .img-article {
       width: 100%;
+      max-width: 500px;
+      margin: auto;
     }
     .content {
       line-height: 18px;
@@ -69,4 +69,9 @@ export default {
     bottom: -25px;
   }
 }
+  @media all and (min-width: 800px) {
+    .wrapper--text {
+      padding: 60px;
+    }
+  }
 </style>
