@@ -1,63 +1,86 @@
 <template>
   <div class="article--list">
-    <img src="../assets/logo.png" alt="" class="logo">
+    <img src="../assets/logo.png" alt="" class="logo" />
 
-    <router-link :to="`/article/${ post.id }`" v-for="post in posts" :key="post.id" >
-      <div class="wrapper--text">
-        <span class="article"> article </span>
-        <span class="date"> 23 mai 2020</span>
-        <h1>{{ post.title }}</h1>
-        <img class="img--desc" src="../assets/test.png" alt="">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, eligendi dignissimos. Odio, obcaecati! Perferendis repellendus veniam nam ullam, eaque, quam neque rem debitis saepe, nisi consectetur. Laborum at voluptatum aspernatur.</p>
-      </div>
-    </router-link>
+    <div class="wrapper--liste">
+      <router-link
+        :to="`/article/${post.id}`"
+        v-for="post in posts"
+        :key="post.id"
+      >
+        <div class="wrapper--text">
+          <span class="article"> article </span>
+          <span class="date"> {{ post.date }}</span>
+          <h1>{{ post.title }}</h1>
+          <img class="img--desc" :src="post.img" alt="" />
+          <p>{{ post.texte }}</p>
+        </div>
+      </router-link>
     </div>
+  </div>
 </template>
 <script>
+//IMPORT LIBRARY
+import gsap from 'gsap'
+
 export default {
-  name: 'ArticleList',
+  name: "ArticleList",
   data() {
     return {
       posts: null,
-    }
+    };
   },
   created() {
-    fetch('https://jsonplaceholder.typicode.com/posts/')
-      .then(response => response.json())
+    fetch("https://my-json-server.typicode.com/melvinDebot/pokemon-go/article")
+      .then((response) => response.json())
       .then((json) => {
         this.posts = json;
       });
   },
-}
+  mounted() {
+    gsap.timeline().staggerFrom('.article--list *', 1, { y: '50px', opacity: 0 }, 0.2)
+  }
+};
 </script>
 <style lang="scss" scoped>
 .article--list {
   padding: 20px;
-  a {
-    .wrapper--text {
-      span {
-        margin-top: 10px;
-        display: block;
-        text-transform: uppercase;
-        &.article {
-          color: red;
-          margin-left: 10px;
+  .wrapper--liste {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    a {
+      .wrapper--text {
+        // height: 400px;
+        margin: 10px;
+        @media screen and (min-width: 769px) {
+          width: 400px;
+          height: 1400px;
         }
-        &.date {
-          font-size: 13px;
+        span {
+          margin-top: 10px;
+          display: block;
+          text-transform: uppercase;
+          &.article {
+            color: red;
+            margin-left: 10px;
+          }
+          &.date {
+            font-size: 13px;
+          }
         }
-      }
-      .img--desc{
-        width: 90%;
-        margin: auto;
-        display: block;
-      }
-      p {
-        text-transform: capitalize;
-        font-weight: 400;
-        width: 90%;
-        margin: auto;
-        margin-top: 10px;
+        .img--desc {
+          width: 100%;
+        }
+        p {
+          text-transform: capitalize;
+          font-weight: 400;
+          margin: auto;
+          margin-top: 10px;
+          line-height: 18px;
+          text-align: justify;
+        }
       }
     }
   }
