@@ -53,9 +53,12 @@ export default {
     width: 70vw;
     margin: auto;
     flex-direction: column;
-    height: 64vh;
+    height: 60vh;
     bottom: 5vh;
     overflow: scroll;
+    @media screen and ( min-width: 769px ) {
+      height: 50vh;
+    }
     .img-article {
       width: 100%;
       max-width: 500px;
