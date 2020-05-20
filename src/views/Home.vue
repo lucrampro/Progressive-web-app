@@ -22,8 +22,7 @@ export default {
   components: {
     Buttons,
   },
-  mounted() {
-  },
+  mounted() {},
 };
 </script>
 <style lang="scss" scoped>

@@ -13,7 +13,7 @@
           <span class="date"> {{ post.date }}</span>
           <h1>{{ post.title }}</h1>
           <img class="img--desc" :src="post.img" alt="" />
-          <p> {{ post.texte }} </p>
+          <p>{{ post.texte }}</p>
         </div>
       </router-link>
     </div>
@@ -35,7 +35,7 @@ export default {
       .then((json) => {
         this.posts = json;
       });
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -50,7 +50,7 @@ export default {
       .wrapper--text {
         // height: 400px;
         margin: 10px;
-        @media screen and (min-width: 769px){
+        @media screen and (min-width: 769px) {
           width: 400px;
           height: 1400px;
         }
@@ -66,7 +66,7 @@ export default {
             font-size: 13px;
           }
         }
-        .img--desc{
+        .img--desc {
           width: 100%;
         }
         p {
